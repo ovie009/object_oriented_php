@@ -1,6 +1,5 @@
 <?php
-    include "./includes/person.inc.php";
-    include "./includes/newclass.inc.php";
+    include "./includes/autoloader.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +24,7 @@
         echo '<br>';
         
         echo 'The drinking age in the United States is ';
-        Person::setDrinkingAge(21);
+        Person::setDrinkingAge(21);  
         echo Person::getDrinkingAge();
 
     ?> </strong>
