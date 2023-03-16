@@ -18,15 +18,8 @@
     </p>
     <strong> <?php
     
-        $person1 = new Person;
-        $person1->setName("Ovie");
-        echo $person1->name;
-
-        echo '<br>';
-        
-        $person2 = new Person;
-        $person2->setName("prosper");
-        echo $person2->name;
+        $person1 = new Person('John Jones', 'Black', 24);
+        echo $person1->getName();
 
     ?> </strong>
 
