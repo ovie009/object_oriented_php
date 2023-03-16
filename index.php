@@ -16,24 +16,19 @@
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. In incidunt inventore commodi a tenetur consequuntur aspernatur repellat molestias temporibus velit?
     </p>
-
-    <?php
-        $pet01 = new Pet();
-
-        // if the method owner is private it will return an error, because the visibility is set as private
-        echo $pet01->owner();
-
-        // when a methos or property is set as private, it can only be used within the same class
+    <strong> <?php
+    
+        $person1 = new Person;
+        $person1->setName("Ovie");
+        echo $person1->name;
 
         echo '<br>';
-        $user = new Person();
-        echo $user->fullname();
-        // despite the property which stores the firstname and lastname are private 
-        // the method fullname is public and it has access to the private property within the class which it then made public
-        echo ' is '.$pet01->age().'years old'; 
+        
+        $person2 = new Person;
+        $person2->setName("prosper");
+        echo $person2->name;
 
-
-    ?>
+    ?> </strong>
 
 
 </body>
