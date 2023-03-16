@@ -19,15 +19,14 @@
     </p>
     <strong> <?php
 
-        $persons = new Person("Iffie Ovie", "Black", 24); 
         echo 'The drinking age in Nigeria is ';
-        echo $persons->getDrinkingAge();
+        echo Person::getDrinkingAge();
         
         echo '<br>';
         
         echo 'The drinking age in the United States is ';
         Person::setDrinkingAge(21);
-        echo $persons->getDrinkingAge();
+        echo Person::getDrinkingAge();
 
     ?> </strong>
 

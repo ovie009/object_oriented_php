@@ -37,7 +37,7 @@
         }
 
         // function to get drinking age
-        public function getDrinkingAge() {
+        public static function getDrinkingAge() {
             // static properties can also be accessed from none static methods
             return self::$drinkingAge;
         }
