@@ -19,10 +19,15 @@
     </p>
     <strong> <?php
 
-        $newClass = new NewClass;
-        unset($newClass); // delete instantiated object
-        echo $newClass->getData(); // now this line of code would return an error message
-        // because the class has been removed
+        $persons = new Person("Iffie Ovie", "Black", 24); 
+        echo 'The drinking age in Nigeria is ';
+        echo $persons->getDrinkingAge();
+        
+        echo '<br>';
+        
+        echo 'The drinking age in the United States is ';
+        Person::setDrinkingAge(21);
+        echo $persons->getDrinkingAge();
 
     ?> </strong>
 

@@ -8,6 +8,10 @@
         private $eyeColor;
         private $age;
 
+        // statuc properties are properties that are not directly connected to a particular object
+
+        private static $drinkingAge = 18;
+
         // used to assign values to properties when the class in instantiated
         // contructor
         public function __construct($name, $eyeColor, $age)
@@ -25,6 +29,17 @@
 
         public function getName() {
             return $this->name;
+        }
+
+        // static function to set drinking age
+        public static function setDrinkingAge($newDrinkingAge) {
+            self::$drinkingAge = $newDrinkingAge;
+        }
+
+        // function to get drinking age
+        public function getDrinkingAge() {
+            // static properties can also be accessed from none static methods
+            return self::$drinkingAge;
         }
 
     }
