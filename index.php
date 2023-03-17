@@ -16,19 +16,20 @@
 </head>
 <body>
 
-    <h1>Calculator</h1>
+    <h1>Scope Resolution</h1>
 
-    <form action="./includes/calc.inc.php" method="post">
-        <input type="number" name="num1" id="num1" placeholder="num1">
-        <input type="number" name="num2" id="num2" placeholder="num2">
-        <select name="operator" id="operator">
-            <option value="add">Addition</option>
-            <option value="sub">Substraction</option>
-            <option value="mul">Multiplication</option>
-            <option value="div">Division</option>
-        </select>
-        <button type="submit">Calculate </button>
-    </form>
+    <span>CONST Variable - </span>
+    <strong><?php
+        echo FirstClass::EXAMPLE;
+    ?></strong>
+
+    <br>
+
+    <?php
+        // SecondClass::staticMethod;
+        SecondClass::staticMethod();
+    ?>
+
 
 </body>
 </html>
