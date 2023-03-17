@@ -26,15 +26,7 @@
     </p>
 
     <?php 
-        function runQuery(DatabaseInterface $db) {
-            // code that uses the methods of DatabaseInterface
-        }
-        
-        $mysql = new MySQLDatabase();
-        runQuery($mysql); // works
-        
-        $postgres = new PostgreSQLDatabase();
-        runQuery($postgres); // also works
+    
     ?>
 
 </body>
