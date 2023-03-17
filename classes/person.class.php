@@ -14,7 +14,7 @@
 
         // used to assign values to properties when the class in instantiated
         // contructor
-        public function __construct($name, $eyeColor, $age)
+        public function __construct(string $name, string $eyeColor, int $age)
         {
             $this->name = $name;
             $this->eyeColor = $eyeColor;
@@ -23,7 +23,10 @@
 
         // methods
         // using the setName methos to uodate the property "name"
-        public function setName($name) {
+        public function setName(string $name) {
+            // if an integer is passed into this method, it will still be accepted
+            // because its possible to wrap an integer around a quote to make it a string
+            // to disable this feature you have to enable strict mode
             $this->name = $name;
         }
 
@@ -32,7 +35,7 @@
         }
 
         // static function to set drinking age
-        public static function setDrinkingAge($newDrinkingAge) {
+        public static function setDrinkingAge(int $newDrinkingAge) {
             self::$drinkingAge = $newDrinkingAge;
         }
 
