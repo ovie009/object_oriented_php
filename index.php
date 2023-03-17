@@ -16,20 +16,26 @@
 </head>
 <body>
 
-    <h1>Scope Resolution</h1>
+    <h1>Interface</h1>
 
-    <span>CONST Variable - </span>
-    <strong><?php
-        echo FirstClass::EXAMPLE;
-    ?></strong>
+    <p>
+        An interface is a way of defining what methods a class must implement, 
+        without specifying how they are implemented1. 
+        Interfaces are useful when you want to have multiple classes that share some common functionality, 
+        but may have different implementations
+    </p>
 
-    <br>
-
-    <?php
-        // SecondClass::staticMethod;
-        SecondClass::staticMethod();
+    <?php 
+        function runQuery(DatabaseInterface $db) {
+            // code that uses the methods of DatabaseInterface
+        }
+        
+        $mysql = new MySQLDatabase();
+        runQuery($mysql); // works
+        
+        $postgres = new PostgreSQLDatabase();
+        runQuery($postgres); // also works
     ?>
-
 
 </body>
 </html>
