@@ -3,7 +3,17 @@
     spl_autoload_register('myAutoloader');
 
     function myAutoloader($className) {
-        $pathPrefix = "classes/";
+
+        $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        if (strpos($url, 'includes') == true) {
+            # code...
+            $pathPrefix = "../classes/";
+        } else {
+            # code...
+            $pathPrefix = "classes/";
+        }
+        
+
         $pathSuffix = '.class.php';
         $fullPath = $pathPrefix.$className.$pathSuffix;
 

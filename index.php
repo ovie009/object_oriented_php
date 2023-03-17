@@ -16,26 +16,19 @@
 </head>
 <body>
 
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In incidunt inventore commodi a tenetur consequuntur aspernatur repellat molestias temporibus velit?
-    </p>
-    <strong> <?php
+    <h1>Calculator</h1>
 
-        $person = new Person("Okomite-Iffie Ovie", "Black", 24);
-
-        try {
-            $person->setName("Iffie Ovie");
-            echo $person->getName();
-        } catch (\Throwable $th) {
-            //throw $th;
-            // if the code in the try block doesn't work, catch the error
-            // echo the error message
-            echo  '[ERROR!]: '.$th->getMessage(); 
-        }
-
-    ?> </strong>
-
+    <form action="./includes/calc.inc.php" method="post">
+        <input type="number" name="num1" id="num1" placeholder="num1">
+        <input type="number" name="num2" id="num2" placeholder="num2">
+        <select name="operator" id="operator">
+            <option value="add">Addition</option>
+            <option value="sub">Substraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>
+        </select>
+        <button type="submit">Calculate </button>
+    </form>
 
 </body>
 </html>
