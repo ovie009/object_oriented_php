@@ -16,29 +16,10 @@
 </head>
 <body>
 
-    <h1>Anonymous Class</h1>
-
-    <p>
-        They are usually a class that needs to be used once in one place in a website
-    </p>
+    <h1>Connect to Database</h1>
 
     <?php
 
-        // regular class
-        $regClass = new SimpleClass;
-        echo $regClass->helloWorld().' &nbsp <em>from regukar class</em>'; 
-    
-        // line break
-        echo '<br>';
-
-        // anonymous class
-        $anonClass = new class() {
-            public function hellowWorld() {
-                return "<strong>Hello World!</strong>";
-            }
-        };
-
-        echo $anonClass->hellowWorld().' &nbsp <em> from anonymous class</em>';
     ?>
 
 </body>
