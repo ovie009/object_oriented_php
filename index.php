@@ -16,17 +16,29 @@
 </head>
 <body>
 
-    <h1>Interface</h1>
+    <h1>Anonymous Class</h1>
 
     <p>
-        An interface is a way of defining what methods a class must implement, 
-        without specifying how they are implemented1. 
-        Interfaces are useful when you want to have multiple classes that share some common functionality, 
-        but may have different implementations
+        They are usually a class that needs to be used once in one place in a website
     </p>
 
     <?php
+
+        // regular class
+        $regClass = new SimpleClass;
+        echo $regClass->helloWorld().' &nbsp <em>from regukar class</em>'; 
     
+        // line break
+        echo '<br>';
+
+        // anonymous class
+        $anonClass = new class() {
+            public function hellowWorld() {
+                return "<strong>Hello World!</strong>";
+            }
+        };
+
+        echo $anonClass->hellowWorld().' &nbsp <em> from anonymous class</em>';
     ?>
 
 </body>
