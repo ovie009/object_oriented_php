@@ -25,44 +25,8 @@
         but may have different implementations
     </p>
 
-    <?php 
-        $circle = new Circle;
-        $radius = 5.67;
-        echo 'The area of a circle with radius '.$radius.' is ';
-        echo '<strong>';
-        echo $circle->area($radius);
-        echo '</strong>';
-
-        echo '<br>';
-        
-        $rectangle = new Rectangle;
-        $length = 6;
-        $width = 4;
-        echo 'The area of a rectangle with length '.$length.' and width '.$width.' is ';
-        echo '<strong>';
-        echo $rectangle->area(null, $length, $width);
-        echo '</strong>';
-        
-        echo '<br>';
-
-        $cuboid = new Cubiod;
-        $length = 3;
-        $width = 4;
-        $height = 5;
-        echo 'The volume of a cuboid with length '.$length.',  height '.$height.' and width '.$width.' is ';
-        echo '<strong>';
-        echo $cuboid->volume(null, $length, $width, $height);
-        echo '</strong>';
-
-        echo '<br>';
-
-        $cylinder = new Cylinder;
-        $radius = 3;
-        $height = 5;
-        echo 'The volume of a cylinder with radius '.$radius.',  height '.$height.' is ';
-        echo '<strong>';
-        echo $cylinder->volume($radius, null, null, $height);
-        echo '</strong>';
+    <?php
+    
     ?>
 
 </body>
