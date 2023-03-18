@@ -16,17 +16,18 @@
 </head>
 <body>
 
-    <h1>Interface</h1>
+    <h1>Abstract Class</h1>
 
     <p>
-        An interface is a way of defining what methods a class must implement, 
-        without specifying how they are implemented1. 
-        Interfaces are useful when you want to have multiple classes that share some common functionality, 
-        but may have different implementations
+        Abstract class is a class that can only be used within other classes amnd cannot be instantiated
     </p>
 
     <?php
-    
+
+        $product = new BuyProduct;
+        echo '<strong>';
+        echo $product->getPayment();
+        echo '</strong>';
     ?>
 
 </body>
