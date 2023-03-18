@@ -2,22 +2,14 @@
 
     class Cubiod implements Shapes3D {
 
-        private $length;
-        private $breadth;
-        private $height;
-
-        public function __construct(float $length, float $breadth, float $height) {
-            $this->length = $length;
-            $this->breadth = $breadth;
-            $this->height = $height;
+        public function area(float $radius = null, float $length, float $width, float $height) {
+            $area = 2 * $length * $width + 2 * $length * $height + 2 * $width * $height;
+            return $area;
         }
 
-        public function area() {
-            
-        }
-
-        public function volume() {
-
+        public function volume(float $radius = null, float $length, float $width, float $height) {
+            $volume = $length * $width * $height;
+            return $volume;
         }
     }
 
